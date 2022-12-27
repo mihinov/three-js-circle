@@ -34,7 +34,7 @@ scene.add(mesh);
 scene.add(light);
 scene.add(camera);
 controls.enableDamping = true;
-controls.dampingFactor = 1;
+controls.dampingFactor = 0.05;
 controls.enablePan = false;
 controls.enableZoom = false;
 controls.autoRotate = true;
