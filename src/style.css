@@ -11,6 +11,9 @@ html {
 body {
 	margin: 0;
 	font-family: 'Lato', sans-serif;
+	background-color: black;
+	color: white;
+	overflow: hidden;
 }
 
 .canvas {
@@ -27,7 +30,7 @@ nav {
 	position: relative;
 	color: white;
 	z-index: 2;
-	padding: 4rem 8rem;
+	padding: 4vh 8vw;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -42,15 +45,17 @@ nav a {
 nav ul {
 	list-style: none;
 	display: flex;
-	gap: 4rem;
+	gap: 4vw;
 }
 
 .title {
 	color: white;
 	z-index: 2;
 	position: absolute;
+	text-align: center;
+	width: 100%;
 	font-size: 3rem;
-	left: 50%;
+	left: 0;
 	top: 75%;
-	transform: translate(-50%, -75%);
+	transform: translate(0, -75%);
 }
