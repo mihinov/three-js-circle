@@ -73,10 +73,10 @@ tl.fromTo('.title', { opacity: 0 }, { opacity: 1 });
 let mouseDown = false;
 let rgb = [];
 
-window.addEventListener('mousedown', () => mouseDown = true);
-window.addEventListener('mouseup', () => mouseDown = false);
+window.addEventListener('pointerdown', () => mouseDown = true);
+window.addEventListener('pointerup', () => mouseDown = false);
 
-window.addEventListener('mousemove', (e) => {
+window.addEventListener('pointermove', (e) => {
 	if (mouseDown === true) {
 		rgb = [
 			Math.round((e.pageX / sizes.width) * 255),
@@ -93,6 +93,14 @@ window.addEventListener('mousemove', (e) => {
 	}
 });
 
+document.addEventListener('pointerout', (event) => {
+	if (event.relatedTarget === null) {
+		mouseDown = false;
+	}
+});
+
+document.addEventListener('pointerup', () => mouseDown = false);
+document.addEventListener('pointerleave', () => mouseDown = false);
 
 
 
